@@ -52,7 +52,7 @@
           slow-identity
           (factory (fn [x]
                      (swap! access-count inc)
-                     (Thread/sleep 100)
+                     (System.Threading.Thread/Sleep 100)                                       ;;; Thread/sleep
                      x))]
       (every? identity (pvalues (slow-identity 5) (slow-identity 5)))
       (is (= @access-count 1)))))
@@ -109,7 +109,7 @@
     (are [x y] =
          42        (mine 42)
          {[42] 42} (snapshot mine))
-    (Thread/sleep 3000)
+    (System.Threading.Thread/Sleep 3000)                                               ;;; Thread/sleep 
     (are [x y] =
          43        (mine 43)
          {[43] 43} (snapshot mine)
@@ -118,7 +118,7 @@
   ;; CMEMOIZE-15 edge case where TTLCache expires on miss/lookup
   (let [mine  (ttl identity :ttl/threshold 5)
         limit 2000000
-        start (System/currentTimeMillis)]
+        start Environment/TickCount]                                                   ;;; (System/currentTimeMillis)
     (loop [n 0]
       (if-not (mine 42)
         (do
@@ -126,7 +126,7 @@
         (if (< n limit)
           (recur (+ 1 n)))))
     (println "ttl test completed" limit "calls in"
-             (- (System/currentTimeMillis) start) "ms")))
+             (- Environment/TickCount start) "ms")))                                  ;;; (System/currentTimeMillis)
 
 
 (deftest test-lu

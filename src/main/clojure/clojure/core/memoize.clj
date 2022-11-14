@@ -93,7 +93,7 @@
     (PluggableMemoization.
      f (clojure.core.cache/seed cache (derefable-seed base))))
   Object
-  (toString [_] (str cache)))
+  (ToString [_] (str cache)))                                        ;;; toString
 
 ;; # Auxilliary functions
 
@@ -326,7 +326,7 @@
 
 (defmacro ^{:private true} massert [condition msg]
   `(when-not ~condition
-      (throw (new AssertionError (str "clojure.core.memoize/" ~msg "\n" (pr-str '~condition))))))
+      (throw (new InvalidOperationException (str "clojure.core.memoize/" ~msg "\n" (pr-str '~condition))))))    ;;; AssertionError
 
 (defmacro ^{:private true} check-args [nom f base key threshold]
   (when *assert*
@@ -337,8 +337,8 @@
       `(do (massert (= ~key ~good-key) ~key-error)
            (massert (some #{clojure.lang.IFn
                             clojure.lang.AFn
-                            java.lang.Runnable
-                            java.util.concurrent.Callable}
+                                                                     ;;; java.lang.Runnable
+                            }                                        ;;; java.util.concurrent.Callable
                           (ancestors (class ~f)))
                     ~fun-error)
            (massert (number? ~threshold) ~thresh-error)))))
