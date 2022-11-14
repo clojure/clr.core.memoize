@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<PackageId>clojure.core.memoize</PackageId>
+		<RootNamespace>clojure.core</RootNamespace>
+		<Title>clojure.core.memoize</Title>
+		<Product>clojure.core.memoize</Product>
+		<AssemblyTitle>clojure.core.memoize</AssemblyTitle>
+		<Authors>David Miller</Authors>
+		<Description>A port of the core.memoize library to ClojureCLR</Description>
+		<Copyright>Copyright © 2022 Rich Hickey, David Miller, ClojureCLR Contributors</Copyright>
+		<PackageLicenseExpression>EPL-1.0</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/clojure/clojure.tools.namesapce</RepositoryUrl>
+		<Company>ClojureCLR contributors</Company>
+		<PackageTags>Clojure;ClojureCLR</PackageTags>
+		<Version>1.0.257</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<EmbeddedResource CopyToOutputDirectory="Never" Include="..\..\clojure\clojure\core\**\*" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="clojure.core.cache" Version="1.0.226" />
+	</ItemGroup>
+	
+</Project>
