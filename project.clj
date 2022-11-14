@@ -3,7 +3,7 @@
   :url "https://github.com/clojure/clr.core.memoize"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure.clr/core.cache "1.0.225"]]
+  :dependencies [[org.clojure.clr/core.cache "1.0.226"]]
   :warn-on-reflection true
   :source-paths ["src/main/clojure"]
   :test-paths ["src/test/clojure"]    
