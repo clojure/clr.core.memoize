@@ -9,12 +9,12 @@ See that repository for documentation.
 Nuget reference:
 
 ```
-PM> Install-Package clojure.data.priority-map  -Version 1.0.257
+PM> Install-Package clojure.core.memoize  -Version 1.0.257
 ```
 
 Leiningen/Clojars reference:
 
-[org.clojure.clr/data.priority-map "1.0.257"]
+[org.clojure.clr/core.memoize "1.0.257"]
 
 ## Copyright and License
 
