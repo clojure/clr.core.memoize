@@ -10,7 +10,7 @@ The latest stable release is 1.1.266.
 
 [CLI/`deps.edn`](https://clojure.org/reference/deps_edn) dependency information:
 ```clojure
- {io.github.clojure/clr.core.memoize {:git/tag "v1.1.266" :git/sha "1c22751"}}
+ {io.github.clojure/clr.core.memoize {:git/tag "v1.1.266" :git/sha "a1a7f68"}}
 ```
 
 Nuget reference:
