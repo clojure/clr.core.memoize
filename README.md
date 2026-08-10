@@ -6,22 +6,22 @@ See that repository for documentation.
 
 # Releases
 
-The latest stable release is 1.1.266.
+The latest stable release is 1.2.281.
 
 [CLI/`deps.edn`](https://clojure.org/reference/deps_edn) dependency information:
 ```clojure
- {io.github.clojure/clr.core.memoize {:git/tag "v1.1.266" :git/sha "a1a7f68"}}
+ {io.github.clojure/clr.core.memoize {:git/tag "v1.2.281" :git/sha "860259c"}}
 ```
 
 Nuget reference:
 
 ```
-PM> Install-Package clojure.core.memoize  -Version 1.1.266
+PM> Install-Package clojure.core.memoize  -Version 1.2.281
 ```
 
 Leiningen/Clojars reference:
 
-[org.clojure.clr/core.memoize "1.1.266"]
+[org.clojure.clr/core.memoize "1.2.281"]
 
 ## Copyright and License
 
